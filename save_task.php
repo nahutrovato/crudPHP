@@ -6,8 +6,8 @@ include("db.php");
         $title = $_POST["title"];
         $description = $_POST["description"];
 
-        $create = "INSERT INTO task(title, description) VALUES ('$title', '$description')";
-        $result = mysqli_query($db,$create);
+        $createQuery = "INSERT INTO task(title, description) VALUES ('$title', '$description')";
+        $result = mysqli_query($db,$createQuery);
 
         if($result){
             header("Location: index.php");
