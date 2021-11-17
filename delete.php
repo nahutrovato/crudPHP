@@ -3,6 +3,7 @@
 include("db.php");
 
     if(isset($_GET["id"])){
+       
         $id = $_GET["id"];
 
         $deleteQuery = "DELETE FROM task WHERE id = $id";
@@ -16,5 +17,5 @@ include("db.php");
     }
 
     $_SESSION["message"] = "Tarea borrada satisfactoriamente";
-    $_SESSION["message_type"] = "success";
+    $_SESSION["message_type"] = "danger";
 ?>
